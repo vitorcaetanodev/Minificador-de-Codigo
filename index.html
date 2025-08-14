@@ -1,0 +1,57 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minificador de Código Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <h1><img src="logo.png" alt="Logo" class="logo"> Minificador de Código Online</h1>
+        <p>Cole seu código, escolha o tipo e clique em "Minificar" para otimizar.</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <label for="language">Tipo de Código:</label>
+            <select id="language">
+                <option value="javascript">JavaScript</option>
+                <option value="css">CSS</option>
+                <option value="html">HTML</option>
+            </select>
+            <button id="minify-btn">Minificar</button>
+        </div>
+
+        <div class="editor-container">
+            <div class="editor">
+                <h2>Código Original</h2>
+                <textarea id="input-code" placeholder="Cole seu código aqui..."></textarea>
+            </div>
+            <div class="editor">
+                <h2>Código Minificado</h2>
+                <textarea id="output-code" readonly placeholder="O resultado aparecerá aqui..."></textarea>
+                <button id="copy-btn">Copiar</button>
+                 <div id="stats"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Criado com bibliotecas de código aberto.</p>
+    </footer>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "terser": "https://cdn.jsdelivr.net/npm/terser/dist/bundle.min.js",
+        "html-minifier-terser": "https://cdn.jsdelivr.net/npm/html-minifier-terser/dist/htmlminifier.min.js",
+        "csso": "https://cdn.jsdelivr.net/npm/csso/dist/csso.min.js"
+      }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
